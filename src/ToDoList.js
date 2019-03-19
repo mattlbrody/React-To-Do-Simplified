@@ -1,18 +1,19 @@
+import './ToDoList.css';
 import React from 'react';
 
 const ToDoList = (props) => {
 
-  const toDoList = props.data.map(function(item) {
+  const toDoList = props.data.map(item => {
     return (
       <div key={item.id}>
-        <li>{item.item}</li>
+        <li className="collection-item">{item.item}</li>
       </div>
     );
   })
-  
+
   return (
     <div>
-      <ul>
+      <ul className="collection">
         {toDoList}
       </ul>
     </div>
